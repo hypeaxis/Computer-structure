@@ -1,0 +1,20 @@
+.data
+	A: .word 1, 2, 3, 4, 5 ,6 ,7 ,8, 9, 10
+.text 
+	#tinh tong mang: luu vao $t0
+	
+	li $s0, 0
+	li $t9, 10	# so phan tu cua mang
+	la $s1, A	#s1 = A[0]
+	
+LAP:
+ 	sll $t1, $s0, 2
+ 	add $t2, $s1, $t1
+ 	
+ 	lw $t3, 0($t2)
+ 	add $s0, $s0, $t3
+ 	
+ 	addi $s0, $s0, 1
+ 	bne $s0, $t9, LAP
+	
+	
