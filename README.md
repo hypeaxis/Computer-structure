@@ -1,0 +1,1 @@
+Laboratorys' reports weekly 
